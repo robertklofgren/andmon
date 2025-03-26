@@ -14,7 +14,7 @@ A quick and dirty script to extend your desktop to an Android device using xdg-d
 ## Setup
 
 1. **Install mpv-android**  
-   Download and install [mpv-android](https://github.com/mpv-player/mpv-android) on your Android device.
+   Download and install mpv-android on your Android device.
 
 2. **Configure mpv-android**  
    Open mpv-android on your device and edit the `mpv.conf` file to include the following settings:
