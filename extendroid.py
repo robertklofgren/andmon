@@ -7,8 +7,7 @@ import subprocess
 import json
 import gi
 
-gi.require_version('Gst', '1.0')
-gi.require_version('GstRtspServer', '1.0')
+
 from gi.repository import Gio, GLib, Gst, GstRtspServer, GObject
 
 def pause_debug(msg="Pausing for debugging... Press Ctrl-C to exit."):
