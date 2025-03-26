@@ -5,7 +5,7 @@ A quick and dirty script to extend your desktop to an Android device using xdg-d
 
 ## Requirements
 
-- Android device with [mpv-android](https://github.com/mpv-player/mpv-android) installed.
+- Android device with USB debugging enabled and [mpv-android](https://github.com/mpv-player/mpv-android) installed.
 - USB connection between your computer and Android device.
 - xdg-desktop-portal installed on your system.
 - Gstreamer with your preferred encoder.
