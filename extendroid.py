@@ -173,17 +173,18 @@ def setup_adb():
 
 def push_open():
     try:
-        print("Opening stream in VLC")
+        print("Opening stream in mpv")
         subprocess.run([
             "adb", "shell", "am", "start",
-            "-n", "org.videolan.vlc/.gui.video.VideoPlayerActivity",
-            "-d", "rtsp://127.0.0.1:5000/test",
+            "-n", "is.xyz.mpv/is.xyz.mpv.MPVActivity",
+            "-e", "filepath", "rtsp://127.0.0.1:5000/test"
         ], check=True)
         return True
     except Exception as e:
         print(f"ADB error: {e}")
         pause_debug("ADB command failed. Pausing for debugging.")
         return False
+
 
 def get_node_name_from_id(node_id):
     try:
@@ -251,14 +252,14 @@ def main():
         return
 
     if not push_open():
-        pause_debug("Failed to open VLC stream. Pausing for debugging.")
+        pause_debug("Failed to open stream. Pausing for debugging.")
         return
 
     # Set up an RTSP server that will serve our screen capture.
     class MyRTSPMediaFactory(GstRtspServer.RTSPMediaFactory):
         def do_create_element(self, url):
             pipeline_str = (
-                f"pipewiresrc target-object={target_object} ! video/x-raw,format=BGRA ! videoconvert ! timeoverlay ! "
+                f"pipewiresrc keepalive-time=20 resend-last=true target-object={target_object} ! video/x-raw,format=BGRA ! videoconvert ! timeoverlay ! "
                 "vah264enc bitrate=3000 rate-control=cbr b-frames=0 key-int-max=15 ! "
                 "rtph264pay aggregate-mode=1 name=pay0 pt=96"
             )
