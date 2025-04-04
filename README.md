@@ -2,6 +2,7 @@
 
 A quick and dirty script to extend your desktop to an Android device using xdg-desktop-portal, Gstreamer, and ADB.
 
+**CAVEAT:** You WILL need to wangjangle this script to run on your system. It is the roughest kind of rough draft.
 
 ## Requirements
 
