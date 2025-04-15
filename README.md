@@ -24,5 +24,6 @@ A quick and dirty script to extend your desktop to an Android device using xdg-d
    Execute the script. The first time it runs, you might need to set the resolution, position, and orientation of your virtual monitor.
 
 
-## Work In Progress
-
+## Notes
+extendroid.py was a PoC that I'm leaving up to remind myself of the frustrations of Dbus.
+Use extendroidjpeg.py for an easy solution with acceptable performance.
