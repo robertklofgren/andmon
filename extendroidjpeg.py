@@ -266,7 +266,7 @@ class MJPEGHandler(BaseHTTPRequestHandler):
                         self.wfile.write(f"Content-Length: {len(frame)}\r\n\r\n".encode())
                         self.wfile.write(frame)
                         self.wfile.write(b"\r\n")
-                    time.sleep(0.02)
+                    time.sleep(0.035)
             except Exception as e:
                 print("Client disconnected:", e)
         else:
@@ -357,8 +357,8 @@ def main():
         "queue max-size-buffers=1 leaky=downstream ! "
         "videorate ! video/x-raw,format=BGRA,framerate=30/1 ! "
         "videoconvert ! "
-        "jpegenc quality=60 ! "
-        "appsink name=mysink emit-signals=true max-buffers=3 drop=true"
+        "jpegenc quality=80 ! "
+        "appsink name=mysink emit-signals=true max-buffers=1 drop=true"
     )
     print("Creating GStreamer pipeline:", pipeline_str)
     pipeline = Gst.parse_launch(pipeline_str)
