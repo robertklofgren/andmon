@@ -1,6 +1,6 @@
-# extendroid
+# andmon
 
-A quick and dirty script to extend your desktop to an Android device using xdg-desktop-portal, Gstreamer, and ADB.
+A quick and dirty script to extend your desktop to an Android device using ADB and Gstreamer
 
 **CAVEAT:** You WILL need to wangjangle this script to run on your system. It is the roughest kind of rough draft.
 
@@ -10,20 +10,22 @@ A quick and dirty script to extend your desktop to an Android device using xdg-d
 - ADB (Android Debug Bridge) installed.
 - USB connection between your computer and Android device.
 - xdg-desktop-portal installed on your system.
-- Gstreamer with gst-plugins-ugly
+- Gstreamer
+- vkms (if you want to make a virtual desktop)
 
 ## Setup
 
 1. **Connect Your Device**  
    Connect your Android device to your computer using a USB cable.
 
-2. **Customize the Gstreamer Pipeline**  
-   Edit the Gstreamer pipeline in the script to use an encoder of your choice.
-
-3. **Run the Script**  
-   Execute the script. The first time it runs, you might need to set the resolution, position, and orientation of your virtual monitor.
+2. **Run the Script**  
+   Execute the script. 
 
 
 ## Notes
-extendroid.py was a PoC that I'm leaving up to remind myself of the frustrations of Dbus.
-Use extendroidjpeg.py for an easy solution with acceptable performance.
+This is a rough draft
+
+##To-do
+- Add rtsp option
+- Add encoder options
+- Add playback options to client page
