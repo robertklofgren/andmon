@@ -16,8 +16,8 @@ Extend your desktop to an Android device using ADB and Gstreamer
    Connect your Android device to your computer using a USB cable.
 
 2. **Configure your virtual monitor**
-   Create a virtual display via the method of your choice. On many systems you can use VKMS with 'sudo modprobe vkms'. On hyprland I use 'hyprctl output create headless virt-1'
-   Some implementations of xdg-desktop-portal also allow for the creation of virtual displays through the screen selection dialog.
+   Create a virtual display via the method of your choice. On many systems you can use VKMS with ```sudo modprobe vkms```. On hyprland I use ```hyprctl output create headless virt-1```. Some display configuration tools will allow you to create new displays directly.
+   Some implementations of xdg-desktop-portal also allow for the creation of virtual displays through the screen selection dialog after clicking "Start Stream".
 
 3. **Run the Script**  
    Install requirements and execute the script.
