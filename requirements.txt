@@ -1,0 +1,5 @@
+dbus_python
+PyQt6
+PyQt6_sip
+websockets
+
