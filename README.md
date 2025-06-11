@@ -22,7 +22,8 @@ Extend your desktop to an Android device using ADB and Gstreamer
 3. **Run the Script**  
    Install requirements and execute the script.
    
-5. **Choose an encoder via sys-panel menu and start**
+5. **Choose an encoder via sys-panel menu and start**  
+   
    x264 works best for me. Play around with it. Modify encoder settings in config.py. Play around with them.
 
    
